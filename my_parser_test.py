@@ -38,11 +38,10 @@ class TestParser(unittest.TestCase):
         self.assertEqual(self.tags_all_parsed, self.Parser.get_variables_from_tags())
 
     def test_get_not_nested_tags_names_and_variables(self):
-        pass
-
+        self.assertEqual(self.tag1_parsed, self.Parser.get_not_nested_tags_names_and_variables(0))
 
     def test_get_nested_tags_names_and_variables(self):
-        pass
+        self.assertEqual(self.tags_all_parsed, self.Parser.get_nested_tags_names_and_variables(0))
 
     def test_get_current_tag_name_as_string(self):
         self.assertEqual(self.tag1_name, self.Parser.get_current_tag_name_as_string(self.tags[0]))
